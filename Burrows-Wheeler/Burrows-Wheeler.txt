@@ -1,0 +1,10 @@
+The purpose of this program is to rearrange the characters of strings. We can use the permutations for efficienct searches within datasets which is ideal for pattern matching. Additionally, this transform is essential in many lossless data compression algorithms.
+
+To run this program:
+1. Open terminal and make sure your directory is set properly.
+2. Type 'make' in the terminal.
+3. Type './Burrows-Wheeler-Test
+4. Enter desired string with a '$' at the end and receive the BWT string.
+
+If you currently have a BWT string, you can see what the original message was by:
+1. 
