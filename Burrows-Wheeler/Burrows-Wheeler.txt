@@ -6,5 +6,8 @@ To run this program:
 3. Type './Burrows-Wheeler-Test
 4. Enter desired string with a '$' at the end and receive the BWT string.
 
-If you currently have a BWT string, you can see what the original message was by:
-1. 
+If you currently have a BWT string, you can see what the original message was by running the BWTReversed.cpp program. To do this:
+1. Open terminal and make sure your directory is set properly.
+2. Compile the program "g++ BWTReversed.cpp -o BWTReversed"
+3. Type "./BWTReversed" 
+4. Type the BWT string to obtain the original message.
