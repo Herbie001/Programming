@@ -35,7 +35,7 @@ vector<string> rotations(const string str) {
 }
 
 /**
- * Function 
+ * Function to orchestrate the work to obtain the BWT string.
  * @param str provided by the user.
  * @return the transformed string.
  */
