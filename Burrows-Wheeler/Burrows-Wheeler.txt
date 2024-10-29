@@ -1,4 +1,4 @@
-The purpose of this program is to rearrange the characters of strings. We can use the permutations for efficienct searches within datasets which is ideal for pattern matching. Additionally, this transform is essential in many lossless data compression algorithms.
+The purpose of this program is to perform the rotation of characters in a string, insert all string rotations into a vector, and extract the desired string by concatenating the last character of each string in the vector. We can use the permutations for efficienct searches within datasets which is ideal for pattern matching. Additionally, this transform is essential in many lossless data compression algorithms.
 
 To run this program:
 1. Open terminal and make sure your directory is set properly.
@@ -6,6 +6,10 @@ To run this program:
 3. Type './Burrows-Wheeler-Test
 4. Enter desired string with a '$' at the end and receive the BWT string.
 
+Time Complexity:
+For the optimal time complexity, the best you can do is O(n). If your string is length n, you need to fill a vector with n strings which are simply rotations of the original string. Finally, we need to acquire the desired BWT string which we can do with ease because its the last character of each string in the vector concatenated. This last process runs in O(n). So, overall we achieve the optimal O(n) run time. 
+
+Reversing a BWT string to obtain the original:
 If you currently have a BWT string, you can see what the original message was by running the BWTReversed.cpp program. To do this:
 1. Open terminal and make sure your directory is set properly.
 2. Compile the program "g++ BWTReversed.cpp -o BWTReversed"
