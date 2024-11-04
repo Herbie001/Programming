@@ -15,8 +15,8 @@ string getLastColumn(vector<string> vectorOfStr) {
 }
 
 /**
- * Function that will rotate characters yielding a new string  
- * which will be inserted into a vector.
+ * Function that will rotate characters which yields a new string  
+ * that is inserted into the string vector.
  * @param str the string provided by the user.
  * @return a vector containing rotations of the string.
  */
