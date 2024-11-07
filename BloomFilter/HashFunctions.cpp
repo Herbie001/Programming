@@ -39,9 +39,9 @@ unsigned int hashThree(const string & str) {
 unsigned int hashFour(const string & str) {
     unsigned int x = 0;
     for(const auto & ch : str) {
-        x = (x*ch) + ch
+        x = (x*ch) + ch;
         if(x > 1000) {
-            x -= 500;
+            x -= 250;
         }
     }
     return x;
