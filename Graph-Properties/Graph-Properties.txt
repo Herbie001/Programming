@@ -1,0 +1,12 @@
+The purpose of this program is to answer essential questions about a graph. How many edges? How many nodes? How many neighbors? Can we get from node u to node v and if so does there exist a shortest path? 
+
+To run this program you will need a comma separated value .txt file. In other words, simply open note pad and enter values like so:
+A,B,0.5
+B,C,1
+C,A,0.5
+
+The first two values are the nodes and the third is the edge weight.
+
+Why is this important? Do you like Google Maps, Apple Maps or any sort of navigation tool? It's essentially using Dijkstras algorithm to find the shortest path from your current location to the desired one. 
+
+You may also think about your house in terms of graph theory. Each room is a node, the hallways are edges and the edge weight is the length between each room. 
