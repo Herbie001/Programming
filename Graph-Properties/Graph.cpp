@@ -34,9 +34,6 @@ Graph::Graph(const char* const & edgelist_csv_fn) {
     }
 }
 
-/**
- * Checking existence of node in vector.
- */
 bool Graph::nodeIsInVector(string & node, vector<string> & nodesVector) {
     vector<string>::iterator itr = nodesVector.begin();
     vector<string>::iterator end = nodesVector.end();
@@ -49,10 +46,6 @@ bool Graph::nodeIsInVector(string & node, vector<string> & nodesVector) {
     return true;
 }
 
-/**
- * Can create a vector<vector<int>> where indicies will correlate to degree of node, 
- * and nested vector is the set of nodes correlated to that degree.
- */
 void Graph::createDegreeVector(unordered_map<string, unordered_map<string, double>>& adj, vector<vector<string>>& degreeVec) {
     for (const auto& pair1 : adj) {
         const string& node1 = pair1.first;
@@ -61,9 +54,6 @@ void Graph::createDegreeVector(unordered_map<string, unordered_map<string, doubl
     }
 }
 
-/**
- * Insert nodes into the node vector while also checking existence before.
- */
 void Graph::insertNodesToVector(string node1, string node2, vector<string> & nodesVector) {
     if(nodesVector.size() == 0){
         if(node1 != node2) {
