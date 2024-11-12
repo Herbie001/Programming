@@ -33,7 +33,7 @@ class Graph {
          */
         Graph(const char* const & edgelist_csv_fn);
         
-        // vector of nested vectors for sorting degrees of particular vertices.
+        
         void createDegreeVector(unordered_map<string, unordered_map<string, double>>& adj, vector<vector<string>>& degreeVec);
 
         // Insert function for our nodes vector
@@ -42,7 +42,11 @@ class Graph {
         // Insertion function for our adj. list
         void insertToAdjList(string node1, string node2, double edgeWeight, unordered_map<string, unordered_map<string, double>>& adj);
 
-        // Function that aids in insertion process.
+        /**
+         * Checks to see if the provided node is in the nodesVector.
+         * @param string node & vector of nodes in the graph.
+         * @return true/false dependent on if the node is present in vector.
+         */
         bool nodeIsInVector(string & node, vector<string> & nodesVector);
 
         // Needed for connected comp. algorithm - CSE101 Dasgupta
