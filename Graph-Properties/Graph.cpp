@@ -81,9 +81,6 @@ void Graph::insertNodesToVector(string node1, string node2, vector<string> & nod
     }
 }
 
-/**
- * Insertion function for adj. list.
- */
 void Graph::insertToAdjList(string node1, string node2, double edgeWeight, unordered_map<string, unordered_map<string, double>>& adj) {
     if (adj.empty()) {
         adj[node1][node2] = edgeWeight;
@@ -104,12 +101,10 @@ void Graph::insertToAdjList(string node1, string node2, double edgeWeight, unord
 }
 
 unsigned int Graph::num_nodes() {
-    // Return nodes.size()
     return nodesVector.size();
 }
 
 vector<string> Graph::nodes() {
-    // Return the nodes vector.
     return nodesVector;
 }
 
@@ -146,7 +141,6 @@ double Graph::edge_weight(string const & u_label, string const & v_label) {
 }
 
 vector<string> Graph::neighbors(string const & node_label) {
-    // Can use adj. for this too.
     vector<string> theNeighbors; 
     if(adj.find(node_label) != adj.end()) {
         for(const auto& neighbor : adj[node_label]) {
@@ -212,8 +206,6 @@ vector<tuple<string,string,double>> Graph::shortest_path_weighted(string const &
                 path.push_back(tupleToAdd);
                 currentNode = previousNode;
             }
-            // Add self-loop if start_label is equal to end_label
-            // If you don't want to include the trivial path, remove conditional below.
             if (start_label == end_label) {
                 path.push_back(make_tuple(start_label, start_label, -1));
             }
@@ -263,7 +255,6 @@ vector<vector<string>> Graph::connected_components(double const & threshold) {
             connectedComps.push_back(component);
         }
     }
-
     return connectedComps;
 }
 
@@ -317,6 +308,5 @@ unordered_map<string, double> Graph::dijkstra(string const & start_label, unorde
             }
         }
     }
-
     return distances;
 }
