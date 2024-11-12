@@ -1,5 +1,5 @@
 #include "HashFunctions.h"
-
+using namespace std;
 /**
  * First Hash function
  */

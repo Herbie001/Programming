@@ -2,30 +2,25 @@
 #include "HashFunctions.h"
 
 /**
- * Implement the insert function for the bloom filter.
- * @param string to insert in the bloom filter
- * @return void 
- * 
+ * Implement insert() correctly
  */
-void BloomFilter::insert(const string & str) {
+void BloomFilter::insert(const string & s) {
     unsigned int hashFuncIndex = 0;
     while(hashFuncIndex != K) {
-        unsigned int index = hash_functions[hashFuncIndex](str);
+        unsigned int index = hash_functions[hashFuncIndex](s);
         index = index % M;
-        bits[hashFuncIndex] = true;
+        bits[index] = true;
         hashFuncIndex += 1;
     }
 }
 
 /**
- * Implement the find function for the bloom filter.
- * @param string to determine existence 
- * @return void
+ * Implement find() correctly
  */
-bool BloomFilter::find(const string & str) {
+bool BloomFilter::find(const string & s) {
     unsigned int hashFuncIndex = 0;
     while(hashFuncIndex != K) {
-        unsigned int index = hash_functions[hashFuncIndex](str);
+        unsigned int index= hash_functions[hashFuncIndex](s);
         index = index % M;
         if(bits[index] == false) {
             return false;

@@ -5,39 +5,42 @@
 using namespace std;
 
 /**
- * Class to implement the bloom filter that stores strings.
+ * Class to implement a Bloom Filter that stores strings
  */
 class BloomFilter {
     private:
         /**
-         * K, the number of hash functions to use.
+         * Number of hash functions to use (must be in range 1,5])
          */
         const unsigned int K;
 
         /**
-         * M, the length of the bitset
+         * Length of the bitset (m)
          */
         const unsigned int M;
 
         /**
-         * Boolean vector of size M
+         * Bitset (boolean vector) of length m
          */
         vector<bool> bits;
 
     public:
         /**
-         * Constructor for the Bloom Filter
+         * BloomFilter constructor
          */
         BloomFilter(const unsigned int & k, const unsigned int & m) : K(k), M(m), bits(m,false) {}
 
         /**
-         * Insert function for the bloom filter
+         * Insert string s into this BloomFilter
          */
-        void insert(const string & str);
+        void insert(const string & s);
 
         /**
-         * Find function for the bloom filter
+         * Return false if s definitely doesn't exist in this BloomFilter,
+         * or true if s MIGHT exist in this BloomFilter
+         * @param string
+         * @return True/False
          */
-        bool find(const string & str);
+        bool find(const string & s);
 };
 #endif
