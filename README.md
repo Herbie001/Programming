@@ -7,7 +7,7 @@ which explains the following in detail:
 3. Time complexity coupled with an explanation.
 4. A few examples. 
 
-In each cpp file you will also find documentation for each function describing its purpose.
+In each subdirectory you will find documentation for each function in the .h files.
 
 
 
