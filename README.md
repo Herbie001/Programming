@@ -1,4 +1,4 @@
-# Welcome to my C++ Programming Repo!
+# Welcome to my Programming Repo!
 
 In this repository you will find code that I've written. Each subdirectory contains a markdown file
 which explains the following in detail:
@@ -8,6 +8,8 @@ which explains the following in detail:
 4. A few examples. 
 
 In each subdirectory you will find documentation for each function in the .h files.
+
+
 
 
 
