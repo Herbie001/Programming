@@ -1,0 +1,46 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.tab-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.input-section {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#string-container {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#history-box {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-entry {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
