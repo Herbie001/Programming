@@ -63,7 +63,6 @@ int main() {
      * spaces before, after or both 
      */
     while(getline(file, line)) {
-        //
         istringstream ss(line);
         string value;
         while(getline(ss, value, ',')) {
