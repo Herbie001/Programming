@@ -52,7 +52,7 @@ int main() {
     printVector(test_1_results);
 
     //Read from csv file one line at a time and process data to organize.
-    ifstream file("example_1.csv");
+    ifstream file("example_input_1.csv");
     string line;
     vector<int> dataValues;
 
@@ -70,10 +70,28 @@ int main() {
             dataValues.push_back(stoi(value));
         }
     }
+
     cout << "The dataValues are: ";
     printVector(dataValues);
     cout << "The sorted dataValues are: ";
     vector<int> sortedDataValues = heapSort(dataValues);
     printVector(sortedDataValues);
+
+    ofstream outfile("example_output_1.csv");
+    int count = 0;
+    int lastElement = dataValues.size()-1;
+    // Write ~10 elements per line then '\n'
+    for(const auto& elem : dataValues) {
+        if(count % 10 == 0 && count != 0) {
+            outfile << endl;
+        }
+        if(count != lastElement) {
+            outfile << elem << ", ";
+        } else {
+            outfile << elem;
+        }
+        count += 1;
+    }
+    outfile.close();
     return 0;
 }
