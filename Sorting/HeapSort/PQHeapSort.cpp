@@ -70,7 +70,7 @@ int main() {
             dataValues.push_back(stoi(value));
         }
     }
-
+    file.close();
     cout << "The dataValues are: ";
     printVector(dataValues);
     cout << "The sorted dataValues are: ";
@@ -81,7 +81,7 @@ int main() {
     int count = 0;
     int lastElement = dataValues.size()-1;
     // Write ~10 elements per line then '\n'
-    for(const auto& elem : dataValues) {
+    for(const auto& elem : sortedDataValues) {
         if(count % 10 == 0 && count != 0) {
             outfile << endl;
         }
